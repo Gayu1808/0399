@@ -1,0 +1,2 @@
+Employee: Ravi Kumar
+Monthly salary: ₹45,000

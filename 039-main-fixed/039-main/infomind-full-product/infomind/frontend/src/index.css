@@ -1,0 +1,333 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+
+  .card {
+    @apply bg-white dark:bg-slate-900
+    border border-slate-200 dark:border-slate-800
+    rounded-2xl p-5 shadow-sm;
+  }
+
+  .btn {
+    @apply px-3 py-1.5 rounded-lg
+    border border-slate-300 dark:border-slate-700
+    text-sm
+    hover:border-indigo-500
+    transition
+    focus-visible:outline
+    focus-visible:outline-2
+    focus-visible:outline-indigo-500
+    disabled:opacity-40
+    disabled:cursor-not-allowed;
+  }
+
+  .btn-p {
+    @apply bg-indigo-600
+    text-white
+    border-indigo-600
+    hover:bg-indigo-500;
+  }
+
+  .mut {
+    @apply text-sm
+    text-slate-500
+    dark:text-slate-400;
+  }
+
+  .inp {
+    @apply w-full
+    px-3 py-2
+    rounded-lg
+    border border-slate-300
+    dark:border-slate-700
+    bg-white
+    dark:bg-slate-900
+    text-slate-900
+    dark:text-slate-100
+    focus-visible:outline
+    focus-visible:outline-2
+    focus-visible:outline-indigo-500;
+  }
+}
+
+/* --------------------------------------------------
+   GLOBAL
+-------------------------------------------------- */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-slate-50
+  dark:bg-slate-950
+  text-slate-900
+  dark:text-slate-100
+  antialiased
+  font-sans;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+::selection {
+  background: #c7d2fe;
+  color: #312e81;
+}
+
+/* --------------------------------------------------
+   SCROLLBAR
+-------------------------------------------------- */
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #334155;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* --------------------------------------------------
+   SELECT / DROPDOWN READABILITY
+-------------------------------------------------- */
+
+select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+.dark select {
+  color-scheme: dark;
+}
+
+.dark select option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.dark select option:checked {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+/* --------------------------------------------------
+   THEME — INDIGO
+-------------------------------------------------- */
+
+html.theme-indigo button.bg-indigo-50 {
+  background: #eef2ff !important;
+  border-color: #6366f1 !important;
+  color: #4338ca !important;
+}
+
+html.theme-indigo
+button.bg-indigo-50
+.font-semibold {
+  color: #4338ca !important;
+}
+
+html.theme-indigo .btn-p {
+  background: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+}
+
+/* --------------------------------------------------
+   THEME — EMERALD
+-------------------------------------------------- */
+
+html.theme-emerald button.bg-indigo-50 {
+  background: #ecfdf5 !important;
+  border-color: #10b981 !important;
+  color: #047857 !important;
+}
+
+html.theme-emerald
+button.bg-indigo-50
+.font-semibold {
+  color: #047857 !important;
+}
+
+html.theme-emerald .btn-p {
+  background: #059669 !important;
+  border-color: #059669 !important;
+}
+
+/* --------------------------------------------------
+   THEME — VIOLET
+-------------------------------------------------- */
+
+html.theme-violet button.bg-indigo-50 {
+  background: #f5f3ff !important;
+  border-color: #8b5cf6 !important;
+  color: #6d28d9 !important;
+}
+
+html.theme-violet
+button.bg-indigo-50
+.font-semibold {
+  color: #6d28d9 !important;
+}
+
+html.theme-violet .btn-p {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+}
+
+/* --------------------------------------------------
+   THEME — ROSE
+-------------------------------------------------- */
+
+html.theme-rose button.bg-indigo-50 {
+  background: #fff1f2 !important;
+  border-color: #f43f5e !important;
+  color: #be123c !important;
+}
+
+html.theme-rose
+button.bg-indigo-50
+.font-semibold {
+  color: #be123c !important;
+}
+
+html.theme-rose .btn-p {
+  background: #e11d48 !important;
+  border-color: #e11d48 !important;
+}
+
+/* --------------------------------------------------
+   THEME — EMERALD / VIOLET / ROSE BUTTON HOVER
+-------------------------------------------------- */
+
+html.theme-emerald .btn-p:hover {
+  background: #047857 !important;
+}
+
+html.theme-violet .btn-p:hover {
+  background: #6d28d9 !important;
+}
+
+html.theme-rose .btn-p:hover {
+  background: #be123c !important;
+}
+
+/* --------------------------------------------------
+   FOCUS
+-------------------------------------------------- */
+
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #6366f1;
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------
+   MOBILE
+-------------------------------------------------- */
+
+@media (max-width: 640px) {
+
+  .card {
+    @apply p-4 rounded-xl;
+  }
+
+  h1 {
+    letter-spacing: -0.025em;
+  }
+
+}
+
+/* Theme selection cards */
+html.theme-emerald .card .bg-slate-50,
+html.theme-emerald .card .bg-slate-100 {
+  color: #064e3b;
+}
+
+html.theme-emerald .card .text-slate-500 {
+  color: #64748b;
+}
+
+html.theme-emerald .card .text-emerald-700 {
+  color: #047857;
+}
+
+/* Make security statistics readable in light themes */
+html:not(.dark) .card .bg-slate-50,
+html:not(.dark) .card .bg-slate-100 {
+  color: #0f172a;
+}
+
+html:not(.dark) .card .bg-emerald-50 {
+  color: #065f46;
+}
+
+/* Theme-specific primary buttons */
+html.theme-indigo .btn-p {
+  background: #4f46e5 !important;
+  border-color: #4f46e5 !important;
+  color: #ffffff !important;
+}
+
+html.theme-emerald .btn-p {
+  background: #059669 !important;
+  border-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+html.theme-violet .btn-p {
+  background: #7c3aed !important;
+  border-color: #7c3aed !important;
+  color: #ffffff !important;
+}
+
+html.theme-rose .btn-p {
+  background: #e11d48 !important;
+  border-color: #e11d48 !important;
+  color: #ffffff !important;
+}
+
+/* Consistent focus indicators */
+html.theme-emerald button:focus-visible,
+html.theme-emerald input:focus-visible {
+  outline-color: #059669;
+}
+
+html.theme-violet button:focus-visible,
+html.theme-violet input:focus-visible {
+  outline-color: #7c3aed;
+}
+
+html.theme-rose button:focus-visible,
+html.theme-rose input:focus-visible {
+  outline-color: #e11d48;
+}
+

@@ -1,0 +1,12 @@
+fastapi==0.115.*
+uvicorn[standard]
+sqlmodel
+python-multipart
+pymupdf
+python-docx
+python-dateutil
+httpx
+pytest
+pyjwt
+psycopg2-binary
+psycopg[binary]

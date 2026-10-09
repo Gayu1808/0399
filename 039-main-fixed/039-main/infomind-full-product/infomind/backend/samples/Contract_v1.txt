@@ -1,0 +1,5 @@
+Contract: Nova Supplies
+Vendor: Nova Supplies
+Expiry date: 30 Nov 2026
+Penalty clause: 2% per week
+Signature: signed

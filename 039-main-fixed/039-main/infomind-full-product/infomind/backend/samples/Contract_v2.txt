@@ -1,0 +1,5 @@
+Contract: Nova Supplies
+Vendor: Nova Supplies
+Expiry date: 15 Dec 2026
+Auto renewal: Yes, 12 months
+Signature: signed
